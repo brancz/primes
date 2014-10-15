@@ -1,9 +1,5 @@
 package algorithm
 
-import (
-	//"fmt"
-	//"math/big"
-)
 
 func IsPrime(n int) bool {
 	if n < 2 || n == 4 {

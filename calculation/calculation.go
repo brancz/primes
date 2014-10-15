@@ -1,8 +1,10 @@
-package primes
+package calculation
 
-import "github.com/flower-pot/primes/algorithm"
-import "fmt"
-import "errors"
+import (
+	"fmt"
+	"errors"
+	"github.com/flower-pot/primes/algorithm"
+)
 
 const no_prime int = -1
 
@@ -24,7 +26,7 @@ func CalculatePrimes(start, end int) ([]int, error) {
 			fmt.Println(n)
 		}
 	}
-	return nil, nil
+	return list, nil
 }
 
 func checkPrime(channel chan int, in int) {
