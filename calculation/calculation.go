@@ -3,6 +3,7 @@ package calculation
 import (
 	"fmt"
 	"errors"
+	"sort"
 	"github.com/flower-pot/primes/algorithm"
 )
 
@@ -16,16 +17,20 @@ func CalculatePrimes(start, end int) ([]int, error) {
 		start ++	//So skip it, causes skipping of other even numbers
 	}
 	list := make([]int, 0)
+	if start - 1 <= 2 {
+		list = append(list, 2)
+	}
 	c := make(chan int)
-	for i := start; i < end; i += 2 {
+	for i := start; i < end + 1; i += 2 {
 		go checkPrime(c, i)
 	}
-	for i := start; i < end; i += 2 {
+	for i := start; i < end + 1; i += 2 {
 		if n := <- c; n != no_prime {
 			list = append(list, n)
 			fmt.Println(n)
 		}
 	}
+	sort.Ints(list)
 	return list, nil
 }
 

@@ -11,7 +11,7 @@ func TestIsPrime(t *testing.T) {
 		expectPrime(n, t)
 	}
 
-	notPrimes := []int{1, 0, -1, 6, 4, 100, 1000, 100000}
+	notPrimes := []int{1, 0, -1, 4, 6, 8, 9, 10, 4, 100, 1000, 100000}
 	for _, n := range notPrimes {
 		expectNotPrime(n, t)
 	}
