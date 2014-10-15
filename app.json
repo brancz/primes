@@ -1,0 +1,15 @@
+{
+    "name": "Primes",
+    "description": "Primes As A Service written in Go",
+    "keywords": {
+        "cryptography",
+        "crypto",
+        "primes",
+        "go",
+        "golang"
+    },
+    "repository": "https://github.com/flower-pot/primes",
+    "env": {
+        "BUILDPACK_URL": "https://github.com/kr/heroku-buildpack-go.git"
+    }
+}
